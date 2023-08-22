@@ -4,7 +4,7 @@ import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 export class Model {
 
     @PrimaryGeneratedColumn()
-    id: number;
+    modelid: number;
 
     @Column()
     title:string;

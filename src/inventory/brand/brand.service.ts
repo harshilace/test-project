@@ -11,9 +11,9 @@ export class BrandService {
         return await this.brandRepository.find();
     }
 
-    async getBrand(brandID): Promise<Brand | null> {
-        let id = Number(brandID);
-        const brand = await this.brandRepository.findOneBy({id});
+    async getBrand(brandid): Promise<Brand | null> {
+        let id = Number(brandid);
+        const brand = await this.brandRepository.findOneBy({brandid});
         if (brand) {
             return brand;
         }

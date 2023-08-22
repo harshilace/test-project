@@ -11,9 +11,9 @@ export class ModelService {
         return await this.modelRepository.find();
     }
 
-    async getModel(modelID): Promise<Model | null> {
-        let id = Number(modelID);
-        const model = await this.modelRepository.findOneBy({id});
+    async getModel(modelid): Promise<Model | null> {
+        let id = Number(modelid);
+        const model = await this.modelRepository.findOneBy({modelid});
         if (model) {
             return model;
         }
