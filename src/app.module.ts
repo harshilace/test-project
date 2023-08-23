@@ -10,8 +10,8 @@ import { ConfigModule } from '@nestjs/config';
     InventoryModule,
     ConfigModule.forRoot(),
     TypeOrmModule.forRoot({
-      type: 'mysql',
-      port: Number(`${process.env.DATABASE_PORT}`),
+      type: process.env.DATABASE_TYPE as any,
+      port: parseInt(`${process.env.DATABASE_PORT}`),
       host: `${process.env.DATABASE_HOST}`,
       username: `${process.env.DATABASE_USERNAME}`,
       password: `${process.env.DATABASE_PASSWORD}`,
